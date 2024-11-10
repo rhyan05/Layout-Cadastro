@@ -28,12 +28,8 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 5px solid rgba(136, 10, 209, 0.18);
-}
-
-.form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  margin-top: 15px;  
+  margin-bottom: 15px; 
 }
 
 .form-title {
@@ -41,10 +37,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  flex-wrap: wrap; 
 }
 
 h1 {
   color: aliceblue;
+  font-size: 1.5rem;
 }
 
 .login-button {
@@ -69,6 +67,12 @@ h1 {
   text-decoration: none;
   font-weight: 500;
   color: aliceblue;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group {
@@ -130,33 +134,54 @@ label, h2 {
 }
 
 .btn-cadastro button {
-    width: 100%;
-    margin-top: 2.5rem;
-    border: none;
-    background: linear-gradient(262deg, rgba(249,0,172,0.9780287114845938) 21%, rgba(181,55,196,1) 70%);
-    padding: 0.62rem;
-    border-radius: 5px;
-    cursor: pointer;
-
-    button:hover{
-        background-color: rgb(140, 196, 55);
-    }
-    a {
-        text-decoration: none;
-        font-size: 0.93rem;
-        font-weight: 500;
-        color: #fff;
-    }
+  width: 100%;
+  margin-top: 2.5rem;
+  border: none;
+  background: linear-gradient(262deg, rgba(249, 0, 172, 0.978) 21%, rgba(181, 55, 196, 1) 70%);
+  padding: 0.62rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+.btn-cadastro button:hover {
+  background-color: rgb(140, 196, 55);
+}
+
+.btn-cadastro a {
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: #fff;
+}
 
 @media screen and (max-width: 768px) {
+  .form-title {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  h1 {
+    font-size: 1.2rem; 
+    text-align: center;
+  }
+
   .input-group {
     flex-direction: column;
   }
-  
+
   .login-button {
     top: 0.5rem;
     right: 0.5rem;
+  }
+  
+  .input-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 756px) {
+  .container {
+    max-height: 90vh; 
+    overflow-y: auto; 
   }
 }
